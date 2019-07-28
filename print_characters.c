@@ -6,13 +6,13 @@
  *
  * Return: num of char printed
  */
-int cb_print_string(va_alist list)
+int cb_print_string(va_list list)
 {
 	char *s = va_arg(list, char *);
 	int l = 0;
 
 	for (l = 0; *s; l++)
-		_putchar(*s);
+		_putchar(*s++);
 
 	return (l);
 }
