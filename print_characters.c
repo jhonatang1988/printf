@@ -11,6 +11,9 @@ int cb_print_string(va_list list)
 	char *s = va_arg(list, char *);
 	int l = 0;
 
+	if (!s)
+		s = "(null)";
+
 	for (l = 0; *s; l++)
 		_putchar(*s++);
 
