@@ -23,8 +23,9 @@ int (*get_func(const char *s))(va_list)
 		if (pm[i].fid[0] == s[0])
 		{
 			return (pm[i].func);
-			i++;
 		}
+
+		i++;
 	}
 
 	return (NULL);

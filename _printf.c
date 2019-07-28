@@ -20,12 +20,11 @@ int _printf(const char *format, ...)
 			printf("%c", *format++);
 		else
 		{
-			printf("%% true\n");
-
 			f = get_func((++format));
 
 			if (!f)
-				printf("%%%c", *format++);
+				//printf("%%%c", *format++);
+				;
 			else
 				return (f(list));
 		}
