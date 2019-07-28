@@ -17,17 +17,21 @@ int _printf(const char *format, ...)
 	while (*format)
 	{
 		if (*format != '%')
-			printf("%c", *format++);
+			_putchar(*format);
 		else
 		{
-			f = get_func((++format));
+			f = get_func(++format);
 
 			if (!f)
-				//printf("%%%c", *format++);
-				;
+			{
+				_putchar('%');
+				_putchar(*format);
+			}
 			else
-				return (f(list));
+				(f(list));
 		}
+
+		format++;
 	}
 
 	// printf("das %d\n");
