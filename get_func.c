@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stdlib.h>
-#include "struct.h"
 /**
  * get_func - callbacks a functions dependind on the _printf identifier
  *
