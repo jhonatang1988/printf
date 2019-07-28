@@ -11,29 +11,40 @@ int _printf(const char *format, ...)
 {
 	int (*f)(va_list);
 	va_list list;
+	int l = 0;
 
 	va_start(list, format);
 
 	while (*format)
 	{
 		if (*format != '%')
-			_putchar(*format);
+			l += _putchar(*format);
 		else
 		{
+			if (*(++format) != '%')
+			{
+				format--;
+			}
+			else
+			{
+				l += _putchar(*format++);
+				continue;
+			}
+
 			f = get_func(++format);
 
 			if (!f)
 			{
-				_putchar('%');
-				_putchar(*format);
+				l += _putchar('%');
+				l += _putchar(*format);
 			}
 			else
-				(f(list));
+				l += (f(list));
 		}
 
 		format++;
 	}
 
 	va_end(list);
-	return (0);
+	return (l);
 }
