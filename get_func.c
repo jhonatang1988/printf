@@ -17,12 +17,14 @@ int (*get_func(char *s))(va_list)
 	};
 
 	i = 0;
-
-	while (pm[i].print_methods[0] == s[0])
+	while (pm[i].fid != NULL)
 	{
-		return (pm[i].func);
-		i++;
+		if (pm[i].print_methods[0] == s[0])
+		{
+			return (pm[i].func);
+			i++;
+		}
 	}
 
-	return (0);
+	return (NULL);
 }
