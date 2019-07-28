@@ -4,7 +4,7 @@
 /**
  * get_func - callbacks a functions dependind on the _printf identifier
  *
- * fid: the identifier
+ * @s: string with the specifier
  *
  * Return: the address or pointer to the function selected
  */
