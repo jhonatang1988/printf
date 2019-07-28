@@ -1,6 +1,6 @@
-#include <stdlib.h>
 #include "holberton.h"
-#include "struc.h"
+#include <stdlib.h>
+#include "struct.h"
 /**
  * get_func - callbacks a functions dependind on the _printf identifier
  *
@@ -8,18 +8,19 @@
  *
  * Return: the address or pointer to the function selected
  */
-int (*get_func(char *s))(va_list)
+int (*get_func(const char *s))(va_list)
 {
 	print_methods pm[] = {
-		{"c", cb_print_character},
 		{"s", cb_print_string},
+		{"c", cb_print_char},
 		{NULL, NULL}
 	};
 
-	i = 0;
+	int i = 0;
+
 	while (pm[i].fid != NULL)
 	{
-		if (pm[i].print_methods[0] == s[0])
+		if (pm[i].fid[0] == s[0])
 		{
 			return (pm[i].func);
 			i++;

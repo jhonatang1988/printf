@@ -10,5 +10,5 @@ typedef struct print_methods
 {
 	char *fid;
 	int (*func)(va_list list);
-}
+} print_methods;
 #endif /* STRUCT_H */

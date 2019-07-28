@@ -1,3 +1,4 @@
+#include "holberton.h"
 #include <stdarg.h>
 #include <stdio.h>
 /**
@@ -8,7 +9,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int (*f)(valist);
+	int (*f)(va_list);
 	va_list list;
 
 	va_start(list, format);
@@ -19,12 +20,14 @@ int _printf(const char *format, ...)
 			printf("%c", *format++);
 		else
 		{
-			f = get_funtcion(*(++format));
+			printf("%% true\n");
+
+			f = get_func((++format));
 
 			if (!f)
 				printf("%%%c", *format++);
-
-			f(list);
+			else
+				return (f(list));
 		}
 	}
 
