@@ -1,7 +1,7 @@
 #ifndef STRUCT_H
 #define STRUCT_H
 /**
- * print_methods - struct for all print identifiers
+ * struct print_methods - struct for all print identifiers
  *
  * @fid: the identifier
  * @func: the function to return to print as needed by the identifier

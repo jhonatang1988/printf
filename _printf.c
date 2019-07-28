@@ -34,7 +34,6 @@ int _printf(const char *format, ...)
 		format++;
 	}
 
-	// printf("das %d\n");
 	va_end(list);
 	return (0);
 }
