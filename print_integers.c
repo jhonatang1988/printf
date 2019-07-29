@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * cb_print_integer_d - prints an integer
+ * cb_print_integers - prints an integer
  * @list: list of arguments
  *
  * Return: num of int digits
@@ -45,8 +45,7 @@ void strreverse(char *begin, char *end)
 
 }
 /**
- * itoa - convert a into a string based on Kernighan and Ritchie
- *
+ * _itoa - convert a into a string based on Kernighan and Ritchie
  * @value: the int
  * @str: the char array to fill with the int digits
  * @base: decimal, octagonal etc...
@@ -55,7 +54,6 @@ void strreverse(char *begin, char *end)
  */
 void _itoa(int value, char *str, int base)
 {
-
 	const char num[] = "0123456789abcdefghijklmnopqrstuvwxyz";
 	char *wstr = str;
 	int sign;
