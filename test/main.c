@@ -1,6 +1,6 @@
 #include <limits.h>
 #include <stdio.h>
-#include "../holberton.h"
+#include "holberton.h"
 
 /**
  * main - Entry point
@@ -40,11 +40,5 @@ int main(void)
 	printf("Len:[%d]\n", len2);
 	_printf("Unknown:[%r]\n");
 	printf("Unknown:[%r]\n");
-
-	printf("%i", printf("%s", NULL));
-	printf("%i", _printf("%s", NULL));
-	printf("%i", printf(NULL));
-	printf("%i", _printf(NULL));
-
 	return (0);
-}
+}"'")"'")}
