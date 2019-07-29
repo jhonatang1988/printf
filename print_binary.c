@@ -6,6 +6,11 @@ int cb_print_binary(va_list list)
 	int flag = 0, l = 0;
 	unsigned int i = 0;
 
+	if (n == 0)
+	{
+		return _putchar('0');
+	}
+
 	for (i = 0; i < sizeof(int) * 8; i++)
 	{
 		int bit = ((n << i) & 0x80000000) ? 1 : 0;
