@@ -32,9 +32,8 @@ int _printf(const char *format, ...)
 
 			if (*(++format) == 0)
 				return (-1);
-			else
-				format--;
 
+			format--;
 			f = get_func(++format);
 
 			if (!f)
