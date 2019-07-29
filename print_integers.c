@@ -13,7 +13,7 @@ int cb_print_integers(va_list list)
 	int j;
 	char c;
 
-	itoa(n, nString, 10);
+	_itoa(n, nString, 10);
 
 	for (i = 0; nString[i] != '\0'; i++)
 		;
@@ -53,13 +53,11 @@ void strreverse(char *begin, char *end)
  *
  * Return: Nothing
  */
-void itoa(int value, char *str, int base)
+void _itoa(int value, char *str, int base)
 {
 
 	const char num[] = "0123456789abcdefghijklmnopqrstuvwxyz";
-
 	char *wstr = str;
-
 	int sign;
 
 	if (base < 2 || base > 35)
@@ -68,15 +66,18 @@ void itoa(int value, char *str, int base)
 		return;
 	}
 
-	if ((sign = value) < 0)
+	sign = value;
+	if (sign < 0)
 		value = -value;
 
-	do *wstr++ = num[value%base]; while(value/=base);
+	do
+		* wstr++ = num[value % base];
+	while (value /= base);
 
-	if(sign < 0) *wstr++ = '-';
-
+	if (sign < 0)
+		*wstr++ = '-';
 	*wstr = '\0';
 
-	strreverse(str,wstr-1);
+	strreverse(str, wstr - 1);
 
 }

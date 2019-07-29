@@ -22,5 +22,5 @@ int (*get_func(const char *s))(va_list);
 int cb_print_string(va_list list);
 int cb_print_char(va_list list);
 int cb_print_integers(va_list list);
-void itoa(int value, char *str, int base);
+void _itoa(int value, char *str, int base);
 #endif /* HOLBERTON_H */
