@@ -23,14 +23,17 @@ int _printf(const char *format, ...)
 		else
 		{
 			if (*(++format) != '%')
-			{
 				format--;
-			}
 			else
 			{
 				l += _putchar(*format++);
 				continue;
 			}
+
+			if (*(++format) == 0)
+				return (-1);
+			else
+				format--;
 
 			f = get_func(++format);
 
