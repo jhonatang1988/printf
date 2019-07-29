@@ -29,13 +29,10 @@ int _printf(const char *format, ...)
 				l += _putchar(*format++);
 				continue;
 			}
-
 			if (*(++format) == 0)
 				return (-1);
-
 			format--;
 			f = get_func(++format);
-
 			if (!f)
 			{
 				l += _putchar('%');
@@ -44,10 +41,8 @@ int _printf(const char *format, ...)
 			else
 				l += (f(list));
 		}
-
 		format++;
 	}
-
 	va_end(list);
 	return (l);
 }
