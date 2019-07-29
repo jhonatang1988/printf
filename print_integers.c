@@ -8,15 +8,26 @@
 int cb_print_integers(va_list list)
 {
 	int n  = va_arg(list, int);
-	char nString[50];
-	int i;
-	int j;
+	char nString[INT_DEC_SIZE];
+	unsigned int i;
+	unsigned int j;
 	char c;
+	int int_min_case = 0;
 
+	if (n == INT_MIN)
+	{
+		n++;
+		int_min_case = 1;
+	}
 	_itoa(n, nString, 10);
 
 	for (i = 0; nString[i] != '\0'; i++)
 		;
+
+	if (int_min_case)
+	{
+		nString[i - 1] = nString[i - 1] + 1;
+	}
 
 	for (j = 0; j < i; j++)
 	{

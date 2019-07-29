@@ -1,9 +1,10 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
-
+#define INT_DEC_SIZE (sizeof(int) * (CHAR_BIT / 3 + 3))
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <limits.h>
 /**
  * struct print_methods - struct for all print identifiers
  *
