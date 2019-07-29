@@ -9,11 +9,11 @@ int _printf(const char *format, ...)
 {
 	int (*f)(va_list);
 	va_list list;
-	int l = 0;
+	int l = -1;
 
 	va_start(list, format);
 
-	while (*format)
+	while (format && *format)
 	{
 		if (*format != '%')
 			l += _putchar(*format);
