@@ -4,7 +4,6 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
-
 /**
  * struct print_methods - struct for all print identifiers
  *
@@ -22,6 +21,6 @@ int _printf(const char *format, ...);
 int (*get_func(const char *s))(va_list);
 int cb_print_string(va_list list);
 int cb_print_char(va_list list);
-int cb_print_percentage(va_list list);
-
+int cb_print_integers(va_list list);
+void itoa(int value, char *str, int base);
 #endif /* HOLBERTON_H */
