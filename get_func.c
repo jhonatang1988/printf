@@ -11,6 +11,8 @@ int (*get_func(const char *s))(va_list)
 	print_methods pm[] = {
 		{"s", cb_print_string},
 		{"c", cb_print_char},
+		{"d", cb_print_integers},
+		{"i", cb_print_integers},
 		{NULL, NULL}
 	};
 
