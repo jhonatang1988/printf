@@ -17,7 +17,6 @@ int cb_print_string(va_list list)
 	for (l = 0; *s; l++)
 		_putchar(*s++);
 
-	_putchar('\0');
 	return (l);
 }
 
