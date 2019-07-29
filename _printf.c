@@ -20,15 +20,17 @@ int _printf(const char *format, ...)
 		else
 		{
 			if (*(++format) != '%')
-			{
 				format--;
-			}
 			else
 			{
 				l += _putchar(*format++);
 				continue;
 			}
 
+			if (*(++format) == 0)
+				return (-1);
+
+			format--;
 			f = get_func(++format);
 
 			if (!f)
