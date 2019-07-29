@@ -13,6 +13,7 @@ int (*get_func(const char *s))(va_list)
 		{"c", cb_print_char},
 		{"d", cb_print_integers},
 		{"i", cb_print_integers},
+		{"b", cb_print_binary},
 		{NULL, NULL}
 	};
 
