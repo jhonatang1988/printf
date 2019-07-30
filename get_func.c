@@ -19,6 +19,7 @@ int (*get_func(const char *s))(va_list)
 		{"b", cb_print_binary},
 		{"x", cb_print_hex_integers},
 		{"X", cb_print_hex_capital_integers},
+		{"p", cb_print_pointers},
 		{NULL, NULL}
 	};
 

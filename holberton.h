@@ -34,4 +34,5 @@ int cb_print_unsigned_integers(va_list list);
 int cb_print_octal_integers(va_list list);
 int cb_print_hex_integers(va_list list);
 int cb_print_hex_capital_integers(va_list list);
+int cb_print_pointers(va_list list);
 #endif /* HOLBERTON_H */
