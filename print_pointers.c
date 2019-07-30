@@ -22,7 +22,8 @@ int cb_print_pointers(va_list list)
 		_putchar('n');
 		_putchar('i');
 		_putchar('l');
-		return(_putchar(')'));
+		_putchar(')');
+		return(5);
 	}
 
 	_putchar('0');
