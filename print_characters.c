@@ -1,6 +1,40 @@
 #include "holberton.h"
 
 /**
+ * print_string_reverse - print string reverse
+ * @s: string
+ *
+ * Return: num of char printed
+ */
+int print_string_reverse(char *s)
+{
+	int i = 0;
+
+	if (!*s)
+		return (0);
+
+	i += print_string_reverse(s + 1) + 1;
+	_putchar(*s);
+	return (i);
+}
+
+/**
+ * cb_print_string_r - print string
+ * @list: by get argument
+ *
+ * Return: num of char printed
+ */
+int cb_print_string_r(va_list list)
+{
+	char *s = va_arg(list, char *);
+
+	if (!s)
+		s = "(null)";
+
+	return (print_string_reverse(s));
+}
+
+/**
  * cb_print_string - print string
  * @list: by get argument
  *

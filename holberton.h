@@ -21,6 +21,7 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int (*get_func(const char *s))(va_list);
 
+int cb_print_string_r(va_list list);
 int cb_print_string(va_list list);
 int cb_print_char(va_list list);
 int cb_print_integers(va_list list);
