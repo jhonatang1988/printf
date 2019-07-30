@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <limits.h>
+#include <stdint.h>
 /**
  * struct print_methods - struct for all print identifiers
  *

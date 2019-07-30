@@ -23,7 +23,7 @@ int cb_print_pointers(va_list list)
 		_putchar('i');
 		_putchar('l');
 		_putchar(')');
-		return(5);
+		return (5);
 	}
 
 	_putchar('0');
