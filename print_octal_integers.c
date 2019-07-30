@@ -16,10 +16,10 @@ int cb_print_octal_integers(va_list list)
 
 	if (n == 0)
 	{
-		return _putchar('0');
+		return (_putchar('0'));
 	}
 
-	for (j = 30; j >= 0; j = j - 3)
+	for (j = (sizeof(int) * 8) - 2; j >= 0; j = j - 3)
 	{
 		bit = (n >> j & 0x7);
 
