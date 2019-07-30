@@ -16,6 +16,8 @@ int (*get_func(const char *s))(va_list)
 		{"u", cb_print_unsigned_integers},
 		{"o", cb_print_octal_integers},
 		{"b", cb_print_binary},
+		{"x", cb_print_hex_integers},
+		{"X", cb_print_hex_capital_integers},
 		{NULL, NULL}
 	};
 
