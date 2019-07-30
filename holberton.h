@@ -24,4 +24,8 @@ int cb_print_string(va_list list);
 int cb_print_char(va_list list);
 int cb_print_integers(va_list list);
 void _itoa(int value, char *str, int base);
+void _unsigneditoa(unsigned int value, char *str, int base);
+void _octalitoa(int value, char *str, int base);
+int cb_print_unsigned_integers(va_list list);
+int cb_print_octal_integers(va_list list);
 #endif /* HOLBERTON_H */
