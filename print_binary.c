@@ -1,5 +1,10 @@
 #include "holberton.h"
-
+/**
+ * cb_print_binary - print integer in binary
+ * @list: argument
+ *
+ * Return: return num of char printed
+ */
 int cb_print_binary(va_list list)
 {
 	int n = va_arg(list, int);
