@@ -27,7 +27,7 @@ int cb_print_unsigned_integers(va_list list)
 }
 
 /**
- * strreverse - reverse the string created based on the null character
+ * unsignedstrreverse - reverse the string created based on the null character
  *
  * @begin: first char
  * @end: last char
@@ -45,7 +45,7 @@ void unsignedstrreverse(char *begin, char *end)
 
 }
 /**
- * _itoa - convert a into a string based on Kernighan and Ritchie
+ * _unsigneditoa - convert a into a string based on Kernighan and Ritchie
  * @value: the int
  * @str: the char array to fill with the int digits
  * @base: decimal, octagonal etc...

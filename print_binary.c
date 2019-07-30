@@ -8,7 +8,7 @@ int cb_print_binary(va_list list)
 
 	if (n == 0)
 	{
-		return _putchar('0');
+		return (_putchar('0'));
 	}
 
 	for (i = 0; i < sizeof(int) * 8; i++)
