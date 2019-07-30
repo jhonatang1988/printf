@@ -21,7 +21,7 @@ int cb_print_hex_capital_integers(va_list list)
 		return (_putchar('0'));
 	}
 
-	for (j = (sizeof(int) * 8) - 4; j >=0; j = j - 4)
+	for (j = (sizeof(int) * 8) - 4; j >= 0; j = j - 4)
 	{
 		bit = (n >> j & 0xF);
 
