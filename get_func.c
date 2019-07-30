@@ -13,7 +13,12 @@ int (*get_func(const char *s))(va_list)
 		{"c", cb_print_char},
 		{"d", cb_print_integers},
 		{"i", cb_print_integers},
+		{"u", cb_print_unsigned_integers},
+		{"o", cb_print_octal_integers},
+		{"r", cb_print_string_r},
 		{"b", cb_print_binary},
+		{"x", cb_print_hex_integers},
+		{"X", cb_print_hex_capital_integers},
 		{NULL, NULL}
 	};
 
