@@ -68,10 +68,18 @@ int cb_print_rot13(va_list list)
 
 	while (*s)
 	{
-		zZ = (*s <= 'Z') ? 90 : 122;
-		c = (zZ >= (*s + 13)) ? (*s + 13) : (*s + 13) - 26;
-		_putchar(c);
-		s++;
+		if ((*s >= 'a' && *s <= 'z') || (*s >= 'A' && *s <= 'Z'))
+		{
+			zZ = (*s <= 'Z') ? 90 : 122;
+			c = (zZ >= (*s + 13)) ? (*s + 13) : (*s + 13) - 26;
+			_putchar(c);
+			s++;
+		}
+		else
+		{
+			_putchar(*s++);
+		}
+
 		l++;
 	}
 
