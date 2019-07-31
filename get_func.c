@@ -20,6 +20,7 @@ int (*get_func(const char *s))(va_list)
 		{"x", cb_print_hex_integers},
 		{"X", cb_print_hex_capital_integers},
 		{"p", cb_print_pointers},
+		{"R", cb_print_rot13},
 		{NULL, NULL}
 	};
 

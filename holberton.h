@@ -27,6 +27,7 @@ int cb_print_string(va_list list);
 int cb_print_char(va_list list);
 int cb_print_integers(va_list list);
 int cb_print_binary(va_list list);
+int cb_print_rot13(va_list list);
 
 void _itoa(int value, char *str, int base);
 void _unsigneditoa(unsigned int value, char *str, int base);
