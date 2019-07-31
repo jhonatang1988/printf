@@ -55,6 +55,30 @@ int cb_print_string(va_list list)
 }
 
 /**
+ * cb_print_rot13 - print string in rot13
+ * @list: by get argument
+ *
+ * Return: Always 1
+ */
+int cb_print_rot13(va_list list)
+{
+	char *s = va_arg(list, char *);
+	int zZ = 0, l = 0;
+	char c = 0;
+
+	while (*s)
+	{
+		zZ = (*s <= 'Z') ? 90 : 122;
+		c = (zZ >= (*s + 13)) ? (*s + 13) : (*s + 13) - 26;
+		_putchar(c);
+		s++;
+		l++;
+	}
+
+	return (l);
+}
+
+/**
  * cb_print_char - print char
  * @list: by get argument
  *
