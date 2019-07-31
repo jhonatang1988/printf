@@ -1,0 +1,118 @@
+.TH PRINTF 3  2019-07-30 "GNU" "Linux Programmer's Manual"
+.SH NAME
+_printf \- formatted output conversion
+.SH SYNOPSIS
+.B #include "holberton.h"
+.sp
+.BI "int printf(const char *" format ", ...);"
+.br
+.SH DESCRIPTION
+The function in the
+.BR _printf ()
+family, makes it possible to convert an specific
+.I format
+into a desirable output in the stardard output stream, ie
+.IR stdout.
+This function writes an output following logic and conditional rules framed as a
+.I format
+ and are meant to be perfomed over a series of arguments
+ that are taken through variable-length argument of the
+.BR stdarg (3)
+c library.
+.SS Return value
+What is returned in a successful case, is the length ie.
+ number of characters that were printed.
+ In the case of a string it does not count the null byte.
+
+In the opposite case, when an error is found,
+ a negative value is return, typically the int -1.
+.SS Format of the format string
+The format string is an array of characters.
+ Each character has a shift state,
+ which means that his meaning can be altered
+ by the characters around them (next or behind) in the array.
+The format string can have directives (or none).
+ The first directive are ordinary characters that will be printed
+ as they come out in the standard output stream (Except the
+.BR %
+ character).
+The second group of directives are the conversion specifications.
+ Each one is applied to the argument
+ placed at the same position subsequently (as first-in first-out).
+
+The use of the conversion specification  is the following.
+ First, introduced and
+.BR %
+ character and after, place the
+.IR "conversion specifier".
+
+The arguments MUST correspond to the type that the
+ conversion specifier is waiting (including the type-promotion process in c).
+
+The  arguments are use in order.
+ It means it takes the first argument for the first
+ "conversion specifier" and so on.
+ Number of "conversion specifiers" MUST be equal
+ to the number of arguments.
+
+.SS The conversion specifier
+It's a character that represents the format that
+ will be applied to the argument.
+specifiers available are:
+.TP
+.BR s
+The
+.I string
+argument prints as ordinary characters.
+.TP
+.TP
+.BR b
+The
+.I int
+argument is converted to binary notation.
+.TP
+.TP
+.BR r
+The
+.I string
+argument is reverse and print so "hello" prints "olleh".
+.TP
+.TP
+.BR R
+The
+.I string
+argument is convert to Rot13 encryption.
+.TP
+.BR d ", " i
+The
+.I int
+argument is converted to signed decimal notation.
+.TP
+.BR o ", " u ", " x ", " X
+The
+.I "unsigned int"
+argument is converted to unsigned octal
+.RB ( o ),
+unsigned decimal
+.RB ( u ),
+or unsigned hexadecimal
+.RB ( x
+and
+.BR X )
+notation.
+The letters
+.B abcdef
+are used for
+.B x
+conversions; the letters
+.B ABCDEF
+are used for
+.B X
+conversions.
+.TP
+.BR p
+The
+.I "void\ *"
+pointer argument is printed in hexadecimal with the character
+.B 0x
+prepended.

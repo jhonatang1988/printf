@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <limits.h>
+#include <stdint.h>
 /**
  * struct print_methods - struct for all print identifiers
  *
@@ -34,4 +35,5 @@ int cb_print_unsigned_integers(va_list list);
 int cb_print_octal_integers(va_list list);
 int cb_print_hex_integers(va_list list);
 int cb_print_hex_capital_integers(va_list list);
+int cb_print_pointers(va_list list);
 #endif /* HOLBERTON_H */
